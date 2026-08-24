@@ -34,6 +34,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
 @media (max-width: 650px) { .event-label { font-size: .62rem; }.event h2 { font-size: 1.85rem; }.event-date { font-size: 1rem; }.event-time { font-size: .63rem; }.countdown-heading strong { font-size: 1.45rem; }.countdown-line .countdown strong { font-size: 1.8rem; } }
 .event--haldi, .event--betrothal, .event--reception, .event--wedding { background: transparent; }
 .event { background: transparent !important; }
+.events::before { display: none; }
 .event--wedding { color: var(--ink); margin-top: 0; padding: 1.15rem 0 1.15rem 2.35rem; }.event--wedding .event-icon { left: 0; color: #8e7949; background: var(--paper); }.event--wedding .event-number, .event--wedding .event-label { color: var(--olive); }.event--wedding h2 { color: var(--ink); }.event--wedding .event-date, .event--wedding .event-time { color: #4f5549; }
 .event--wedding .event-label { color: #405b39; font-weight: 600; letter-spacing: .18em; }.event--wedding h2 { color: #304b35; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 600; }.event--wedding .event-date { color: #40513f; font-weight: 600; }.event--wedding .event-time { color: #4d5b4b; font-weight: 600; }
 @media (max-width: 650px) { .event--wedding { padding: 1.15rem 0 1.15rem 2.35rem; }.event--wedding .event-icon { left: 0; } }
