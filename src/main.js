@@ -1,60 +1,48 @@
 import './style.css'
 
-const couplePhotoUrl = `${import.meta.env.BASE_URL}couple-photo.jpg`
+const couplePhotoUrl = `${import.meta.env.BASE_URL}couple-photo.png`
 
 document.querySelector('#app').innerHTML = `
   <div class="petals" aria-hidden="true"></div>
   <main class="invitation">
-    <header class="topbar">
-      <p class="om-mark">V &<span></span> D</p>
-      <p>Come celebrate with us</p>
-      <p class="monogram">2026</p>
-    </header>
-
-    <section class="hero reveal" aria-labelledby="invitation-title">
-      <div class="sun" aria-hidden="true"></div>
-      <p class="eyebrow">A joyful celebration</p>
-      <div class="photo-stage">
-        <img src="${couplePhotoUrl}" alt="Vishnu and Divyadharshni walking together on a beach" />
-        <div class="photo-wash" aria-hidden="true"></div>
-        <button class="name-seal" id="celebrate" type="button" aria-label="Celebrate Vishnu and Divyadharshni">
-          <span class="name-line">Vishnu</span><i>&amp;</i><span class="name-line">Divyadharshni</span>
-        </button>
-      </div>
-      <div class="ornament" aria-hidden="true"><span></span></div>
-      <p class="hero-copy">Together with our families, we seek your presence and blessings as we begin our happily ever after.</p>
-      <p class="tamil-line">அவளும் நானும்</p>
-    </section>
-
-    <section class="countdown-line reveal" aria-label="Countdown to the wedding"><span class="eyebrow">Counting the moments until we celebrate</span><span class="countdown" id="countdown"><strong data-unit="days">00</strong><small>days</small><b>:</b><strong data-unit="hours">00</strong><small>hours</small><b>:</b><strong data-unit="minutes">00</strong><small>min</small><b>:</b><strong data-unit="seconds">00</strong><small>sec</small></span></section>
-
-    <section class="events reveal" aria-label="Wedding events">
-      <article class="event betrothal">
-        <p class="event-label">Betrothal</p>
-        <h2>29.08.2026</h2>
-        <p class="event-date">Saturday</p>
-        <p class="event-time">4:30 - 6:00 PM</p>
-      </article>
-      <article class="event reception">
-        <p class="event-label">The evening before</p>
-        <h2>Reception</h2>
-        <p class="event-date">29.08.2026 · Saturday</p>
-        <p class="event-time">6:00 PM onwards</p>
-      </article>
-      <article class="event wedding">
-        <p class="event-label">The wedding day</p>
-        <h2>Wedding</h2>
-        <p class="event-date">30.08.2026 · Sunday</p>
-        <p class="event-time">8:00 - 9:00 AM</p>
-      </article>
-    </section>
-
-    <section class="venue reveal" aria-labelledby="venue-title">
-      <div><p class="eyebrow">Please join us</p><h2 id="venue-title">Town Panchayat<br />Marriage Hall</h2><p>Kallidaikurichi, Tirunelveli</p></div>
-      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Town+Panchayat+Marriage+Hall%2C+Kallidaikurichi%2C+Tirunelveli" target="_blank" rel="noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
-    </section>
-
-    <footer><p>We cannot wait to celebrate with you.</p><p>Reception 29 August · Marriage 30 August 2026</p></footer>
+    <div class="ambient-photo" style="background-image: url('${couplePhotoUrl}');" aria-hidden="true"></div>
+    <div class="paper-card">
+      <header class="topbar">
+        <p class="monogram">V <span>&amp;</span> D</p>
+        <p>Our wedding invitation</p>
+        <p>30 · 08 · 2026</p>
+      </header>
+      <section class="hero reveal" aria-labelledby="invitation-title">
+        <div class="floral-corner floral-corner-left" aria-hidden="true">✽</div>
+        <div class="floral-corner floral-corner-right" aria-hidden="true">✽</div>
+        <p class="eyebrow">Together with our families</p>
+        <p class="invitation-line">We joyfully invite you to celebrate</p>
+        <div class="photo-stage">
+          <img src="${couplePhotoUrl}" alt="Vishnu and Divyadharshni walking together on a beach" />
+          <div class="photo-wash" aria-hidden="true"></div>
+          <button class="name-seal" id="celebrate" type="button" aria-label="Celebrate Vishnu and Divyadharshni">
+            <span id="invitation-title" class="name-line">Vishnu</span><i>&amp;</i><span class="name-line">Divyadharshni</span>
+          </button>
+        </div>
+        <p class="hero-copy">As we begin our happily ever after, your presence and blessings would mean the world to us.</p>
+        <p class="tamil-line">அவளும் நானும்</p>
+        <div class="scroll-mark" aria-hidden="true"><span></span></div>
+      </section>
+      <section class="countdown-line reveal" aria-label="Countdown to the wedding"><span class="countdown-heading"><span class="eyebrow">Counting the moments</span><strong>Until forever</strong></span><span class="countdown" id="countdown"><span class="countdown-unit"><strong data-unit="days">00</strong><small>days</small></span><b>:</b><span class="countdown-unit"><strong data-unit="hours">00</strong><small>hours</small></span><b>:</b><span class="countdown-unit"><strong data-unit="minutes">00</strong><small>min</small></span><b>:</b><span class="countdown-unit"><strong data-unit="seconds">00</strong><small>sec</small></span></span></section>
+      <section class="events reveal" aria-label="Wedding events">
+        <article class="event event--haldi"><span class="event-number">01</span><span class="event-icon" aria-hidden="true">✦</span><p class="event-label">Haldi ceremony</p><h2>29.08.2026</h2><p class="event-date">Saturday morning</p><p class="event-time">10:00 - 11:30 AM</p></article>
+        <article class="event event--betrothal"><span class="event-number">02</span><span class="event-icon" aria-hidden="true">◇</span><p class="event-label">Betrothal</p><h2>29.08.2026</h2><p class="event-date">Saturday</p><p class="event-time">4:30 - 6:00 PM</p></article>
+        <article class="event event--reception"><span class="event-number">03</span><span class="event-icon" aria-hidden="true">◌</span><p class="event-label">Reception</p><h2>29.08.2026</h2><p class="event-date">Saturday</p><p class="event-time">6:00 PM onwards</p></article>
+        <article class="event event--wedding"><span class="event-number">04</span><span class="event-icon" aria-hidden="true">✧</span><p class="event-label">Wedding</p><h2>30.08.2026</h2><p class="event-date">Sunday</p><p class="event-time">8:00 - 9:00 AM</p></article>
+      </section>
+      <section class="venue reveal" aria-labelledby="venue-title">
+        <p class="eyebrow">The celebration will be held at</p>
+        <h2 id="venue-title">Town Panchayat<br />Marriage Hall</h2>
+        <p class="venue-place">Kallidaikurchi, Tirunelveli</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Town+Panchayat+Marriage+Hall%2C+Kallidaikurchi%2C+Tirunelveli" target="_blank" rel="noreferrer">View location <span aria-hidden="true">↗</span></a>
+      </section>
+      <footer><p>We cannot wait to celebrate with you.</p><p>With love, Vishnu &amp; Divyadharshni</p></footer>
+    </div>
   </main>
 `
 
@@ -84,11 +72,9 @@ const observer = new IntersectionObserver((entries) => entries.forEach((entry) =
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element))
 
 const celebrateButton = document.querySelector('#celebrate')
-
 celebrateButton.addEventListener('click', () => {
-  const colors = ['#0f4c5c', '#2d8c9d', '#8fd3dc', '#d8f0ed', '#e4b96a']
+  const colors = ['#29483f', '#397c78', '#77a9a0', '#b99152']
   const confetti = document.createDocumentFragment()
-
   for (let index = 0; index < 42; index += 1) {
     const piece = document.createElement('span')
     piece.className = 'confetti'
@@ -99,24 +85,8 @@ celebrateButton.addEventListener('click', () => {
     piece.style.backgroundColor = colors[index % colors.length]
     confetti.append(piece)
   }
-
   document.body.append(confetti)
   celebrateButton.classList.remove('celebrating')
   requestAnimationFrame(() => celebrateButton.classList.add('celebrating'))
   window.setTimeout(() => document.querySelectorAll('.confetti').forEach((piece) => piece.remove()), 2200)
-
-  const audioContext = new (window.AudioContext || window.webkitAudioContext)()
-  const notes = [523.25, 659.25, 783.99]
-  notes.forEach((frequency, index) => {
-    const oscillator = audioContext.createOscillator()
-    const gain = audioContext.createGain()
-    oscillator.type = 'sine'
-    oscillator.frequency.value = frequency
-    gain.gain.setValueAtTime(0, audioContext.currentTime + index * 0.12)
-    gain.gain.linearRampToValueAtTime(0.12, audioContext.currentTime + index * 0.12 + 0.03)
-    gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + index * 0.12 + 0.45)
-    oscillator.connect(gain).connect(audioContext.destination)
-    oscillator.start(audioContext.currentTime + index * 0.12)
-    oscillator.stop(audioContext.currentTime + index * 0.12 + 0.5)
-  })
 })
