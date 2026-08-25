@@ -30,15 +30,18 @@ document.querySelector('#app').innerHTML = `
         <div class="scroll-mark" aria-hidden="true"><span></span></div>
       </section>
 
-      <section class="countdown-line reveal reveal--up" aria-label="Countdown to the wedding">
-        <span class="countdown-heading"><span class="eyebrow">Counting the moments</span><strong>Until forever</strong></span>
-        <span class="countdown" id="countdown">
-          <span class="countdown-unit"><strong data-unit="days">00</strong><small>days</small></span><b>:</b>
-          <span class="countdown-unit"><strong data-unit="hours">00</strong><small>hours</small></span><b>:</b>
-          <span class="countdown-unit"><strong data-unit="minutes">00</strong><small>min</small></span><b>:</b>
-          <span class="countdown-unit"><strong data-unit="seconds">00</strong><small>sec</small></span>
-        </span>
-      </section>
+ <section class="countdown-line reveal reveal--up" aria-label="Countdown to the wedding">
+  <span class="countdown-heading">
+    <span class="eyebrow">Counting the moments</span>
+    <strong>Until forever</strong>
+  </span>
+  <span class="countdown" id="countdown">
+    <span class="countdown-unit"><strong data-unit="days">00</strong><small>days</small></span><b>:</b>
+    <span class="countdown-unit"><strong data-unit="hours">00</strong><small>hours</small></span><b>:</b>
+    <span class="countdown-unit"><strong data-unit="minutes">00</strong><small>min</small></span><b>:</b>
+    <span class="countdown-unit"><strong data-unit="seconds">00</strong><small>sec</small></span>
+  </span>
+</section>
 
       <section class="events" aria-label="Wedding events">
         <article class="event event--haldi reveal reveal--up">

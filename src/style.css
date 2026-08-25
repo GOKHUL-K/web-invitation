@@ -326,3 +326,132 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
 .events .event:nth-child(2) { transition-delay: 0.10s; }
 .events .event:nth-child(3) { transition-delay: 0.15s; }
 .events .event:nth-child(4) { transition-delay: 0.20s; }
+/* -------------------------------------------------------------
+   STACKED ELEGANT ANIMATED COUNTDOWN
+   ------------------------------------------------------------- */
+.countdown-line {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem 1.2rem;
+  margin: 1.8rem auto;
+  text-align: center;
+  
+  /* Theme matching olive background */
+  background: #515844;
+  border: 1px solid rgba(178, 155, 104, 0.45);
+  box-shadow: 0 10px 25px rgba(81, 88, 68, 0.18);
+  overflow: hidden;
+}
+
+/* Background Light Shimmer Animation */
+.countdown-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+  animation: cardShimmer 5s infinite linear;
+}
+
+@keyframes cardShimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Stacked Header Styling */
+.countdown-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.countdown-heading .eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: #c2b280;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.countdown-heading strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  animation: goldGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow {
+  0% { text-shadow: 0 0 0px rgba(254, 240, 138, 0); }
+  100% { text-shadow: 0 0 10px rgba(254, 240, 138, 0.5); color: #fef08a; }
+}
+
+/* Digits & Units Row */
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+}
+
+.countdown-unit strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* Ticking effect on seconds */
+.countdown-unit strong[data-unit="seconds"] {
+  animation: tickPulse 1s infinite;
+}
+
+@keyframes tickPulse {
+  0% { transform: scale(1); }
+  12% { transform: scale(1.14); color: #fef08a; }
+  30% { transform: scale(1); }
+}
+
+.countdown-unit small {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(245, 241, 231, 0.7);
+  text-transform: uppercase;
+  margin-top: 0.35rem;
+}
+
+/* Animated Blinking Colons */
+.countdown b {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #c2b280;
+  font-weight: 400;
+  padding-bottom: 0.8rem;
+  animation: colonBlink 1s infinite alternate ease-in-out;
+}
+
+@keyframes colonBlink {
+  0% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
