@@ -295,3 +295,34 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(81, 88, 68, 0.15);
 }
+/* -------------------------------------------------------------
+   FAST SCROLL REVEAL ANIMATIONS
+   ------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+  /* Reduced duration from 0.8s to 0.4s for quicker response */
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              opacity 0.35s ease-out;
+}
+
+/* Reduced distance from 30px to 18px so it enters faster */
+.reveal--up {
+  transform: translateY(18px);
+}
+
+.reveal--fade {
+  transform: translateY(0);
+}
+
+/* Active State Triggered by IntersectionObserver */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Faster Staggered Delays for Event Cards */
+.events .event:nth-child(1) { transition-delay: 0.05s; }
+.events .event:nth-child(2) { transition-delay: 0.10s; }
+.events .event:nth-child(3) { transition-delay: 0.15s; }
+.events .event:nth-child(4) { transition-delay: 0.20s; }
