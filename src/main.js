@@ -74,61 +74,6 @@ document.querySelector('#app').innerHTML = `
           </div>
         </article>
       </section>
-      <!-- BUS ROUTE CARD -->
-      <section class="bus-route-card reveal" aria-label="Bus Route Information">
-        <div class="bus-card-header">
-          <span class="bus-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M16 6v6"/><path d="M2 12h20"/><path d="M18 18h2a1 1 0 0 0 1-1V7a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v10a1 1 0 0 0 1 1h2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-            Travel Guide
-          </span>
-          <h3>Bus Directions</h3>
-          <p class="bus-subtitle">For guests traveling by public transport</p>
-        </div>
-
-        <div class="route-timeline">
-          <!-- Step 1 -->
-          <div class="route-step">
-            <div class="step-marker origin"></div>
-            <div class="step-info">
-              <span class="step-label">Boarding Point</span>
-              <strong class="step-title">Tirunelveli New Bus Stand</strong>
-              <small>Take any bus bound for <b>Papanasam</b></small>
-            </div>
-          </div>
-
-          <!-- Connecting Bus Motion Line -->
-          <div class="route-line">
-            <span class="bus-pulse">🚌</span>
-          </div>
-
-          <!-- Step 2 (Via) -->
-          <div class="route-step via">
-            <div class="step-marker via-node"></div>
-            <div class="step-info">
-              <span class="step-label">Route Via</span>
-              <strong class="step-title">Veeravanallur,Kallidaikurichi</strong>
-              <small>Key stop along the route</small>
-            </div>
-          </div>
-
-          <!-- Connecting Line -->
-          <div class="route-line second-leg"></div>
-
-          <!-- Step 3 (Destination) -->
-          <div class="route-step destination">
-            <div class="step-marker dest-node"></div>
-            <div class="step-info">
-              <span class="step-label">Destination</span>
-              <strong class="step-title">Kallidaikurchi</strong>
-              <small>Arrival location</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="bus-footer-note">
-          <p>✦ Regular buses available throughout the day from Tirunelveli New Bus Stand ✦</p>
-        </div>
-      </section>
       <section class="venue reveal" aria-labelledby="venue-title">
         <p class="eyebrow">The celebration will be held at</p>
         <h2 id="venue-title">Town Panchayat<br />Marriage Hall</h2>
