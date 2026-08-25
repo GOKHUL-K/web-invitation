@@ -16,6 +16,7 @@ document.querySelector('#app').innerHTML = `
       <section class="hero reveal reveal--up" aria-labelledby="invitation-title">
         <div class="floral-corner floral-corner-left" aria-hidden="true">✽</div>
         <div class="floral-corner floral-corner-right" aria-hidden="true">✽</div>
+        <div class="duo-seal-container reveal reveal--up">
         <p class="eyebrow">Together with our families</p>
         <p class="invitation-line">We joyfully invite you to celebrate</p>
         <div class="photo-stage">
@@ -29,18 +30,43 @@ document.querySelector('#app').innerHTML = `
         <p class="tamil-line">அவளும் நானும்</p>
         <div class="scroll-mark" aria-hidden="true"><span></span></div>
       </section>
+<section class="countdown-line reveal reveal--up" aria-label="Countdown to the wedding">
+  <!-- Top Row: Compact Heading & Dr./Er. Badge -->
+  <div class="countdown-header-row">
+    <div class="countdown-heading">
+      <span class="eyebrow">Counting the moments</span>
+      <strong>Until forever</strong>
+    </div>
 
- <section class="countdown-line reveal reveal--up" aria-label="Countdown to the wedding">
-  <span class="countdown-heading">
-    <span class="eyebrow">Counting the moments</span>
-    <strong>Until forever</strong>
-  </span>
-  <span class="countdown" id="countdown">
-    <span class="countdown-unit"><strong data-unit="days">00</strong><small>days</small></span><b>:</b>
-    <span class="countdown-unit"><strong data-unit="hours">00</strong><small>hours</small></span><b>:</b>
-    <span class="countdown-unit"><strong data-unit="minutes">00</strong><small>min</small></span><b>:</b>
-    <span class="countdown-unit"><strong data-unit="seconds">00</strong><small>sec</small></span>
-  </span>
+    <!-- Profession Fusion Badge -->
+    <div class="fusion-badge-line" aria-label="Doctor and Engineer partnership">
+      <div class="fusion-item doctor-item">
+        <span class="rx-symbol">R<sub>x</sub></span>
+        <svg class="mini-ecg" viewBox="0 0 40 20" width="22" height="11" aria-hidden="true">
+          <path d="M0,10 L8,10 L11,2 L15,18 L19,5 L22,14 L25,10 L40,10" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="title">Dr.</span>
+      </div>
+
+      <span class="fusion-spark" aria-hidden="true">⚡</span>
+
+      <div class="fusion-item engineer-item">
+        <div class="git-box">
+          <span class="git-label">git</span>
+          <span class="commit-hash">#2026</span>
+        </div>
+        <span class="title">Er.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Row: Compact Horizontal Timer -->
+  <div class="countdown" id="countdown">
+    <div class="countdown-unit"><strong data-unit="days">00</strong><small>days</small></div><b>:</b>
+    <div class="countdown-unit"><strong data-unit="hours">00</strong><small>hours</small></div><b>:</b>
+    <div class="countdown-unit"><strong data-unit="minutes">00</strong><small>min</small></div><b>:</b>
+    <div class="countdown-unit"><strong data-unit="seconds">00</strong><small>sec</small></div>
+  </div>
 </section>
 
       <section class="events" aria-label="Wedding events">
