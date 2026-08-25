@@ -78,7 +78,16 @@ document.querySelector('#app').innerHTML = `
         <p class="eyebrow">The celebration will be held at</p>
         <h2 id="venue-title">Town Panchayat<br />Marriage Hall</h2>
         <p class="venue-place">Kallidaikurchi, Tirunelveli</p>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Town+Panchayat+Marriage+Hall%2C+Kallidaikurchi%2C+Tirunelveli" target="_blank" rel="noreferrer">View location <span aria-hidden="true">↗</span></a>
+        <a class="venue-map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Town+Panchayat+Marriage+Hall%2C+Kallidaikurchi%2C+Tirunelveli" target="_blank" rel="noreferrer">
+  <span class="btn-icon">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </svg>
+  </span>
+  <span class="btn-text">View Location</span>
+  <span class="btn-arrow" aria-hidden="true">↗</span>
+</a>
       </section>
       <footer><p>We eagerly wait to celebrate with you.</p><p>With love, Vishnu &amp; Divyadharshni</p></footer>
     </div>

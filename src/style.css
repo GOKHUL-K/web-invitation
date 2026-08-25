@@ -203,3 +203,79 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
 
 .event--wedding .event-label, .event--wedding .event-time { color: #38422d; }
 .event--wedding h2, .event--wedding .event-day { color: #22291b; }
+/* -------------------------------------------------------------
+   UNIQUE FLOATING MAP BUTTON DESIGN
+   ------------------------------------------------------------- */
+.venue-map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.6rem;
+  margin: 1.25rem auto 0;
+  
+  /* Modern Styling */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 241, 231, 0.95));
+  color: #4f5942; /* Soft Olive Ink */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  /* Borders & Shadows */
+  border: 1px solid rgba(178, 155, 104, 0.45);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(81, 88, 68, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  
+  /* Transitions */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-sizing: border-box;
+}
+
+/* Map Pin Icon */
+.venue-map-btn .btn-icon {
+  display: flex;
+  align-items: center;
+  color: #d97706; /* Warm Gold accent */
+  transition: transform 0.3s ease;
+}
+
+.venue-map-btn .btn-icon svg {
+  display: block;
+}
+
+/* Action Arrow Animation */
+.venue-map-btn .btn-arrow {
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #b29b68;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover & Active States */
+.venue-map-btn:hover {
+  background: #4f5942;
+  color: #f5f1e7;
+  border-color: #4f5942;
+  box-shadow: 0 8px 22px rgba(79, 89, 66, 0.25);
+  transform: translateY(-2px);
+}
+
+.venue-map-btn:hover .btn-icon {
+  color: #fef08a;
+  transform: scale(1.1);
+}
+
+.venue-map-btn:hover .btn-arrow {
+  color: #f5f1e7;
+  transform: translate(3px, -3px);
+}
+
+.venue-map-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(79, 89, 66, 0.15);
+}
