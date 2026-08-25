@@ -140,37 +140,37 @@ document.querySelector('#app').innerHTML = `
 /* Floating Petals Generator */
 const petals = document.querySelector('.petals')
 for (let index = 0; index < 14; index += 1) {
-  const petal = document.createElement('span')
-  petal.style.setProperty('--left', `${Math.random() * 100}%`)
-  petal.style.setProperty('--delay', `${Math.random() * 8}s`)
-  petal.style.setProperty('--duration', `${9 + Math.random() * 7}s`)
-  petals.append(petal)
+    const petal = document.createElement('span')
+    petal.style.setProperty('--left', `${Math.random() * 100}%`)
+    petal.style.setProperty('--delay', `${Math.random() * 8}s`)
+    petal.style.setProperty('--duration', `${9 + Math.random() * 7}s`)
+    petals.append(petal)
 }
 
 /* Countdown Logic */
 const weddingDate = new Date('2026-08-30T08:00:00+05:30').getTime()
 const updateCountdown = () => {
-  let remaining = Math.max(0, weddingDate - Date.now())
-  const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 }
-  Object.entries(units).forEach(([unit, duration]) => {
-    const value = Math.floor(remaining / duration)
-    document.querySelector(`[data-unit="${unit}"]`).textContent = String(value).padStart(2, '0')
-    remaining -= value * duration
-  })
+    let remaining = Math.max(0, weddingDate - Date.now())
+    const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 }
+    Object.entries(units).forEach(([unit, duration]) => {
+        const value = Math.floor(remaining / duration)
+        document.querySelector(`[data-unit="${unit}"]`).textContent = String(value).padStart(2, '0')
+        remaining -= value * duration
+    })
 }
 updateCountdown()
 window.setInterval(updateCountdown, 1000)
 
 /* Scroll Observer for Smooth Animations */
 const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible')
-      }
-    })
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible')
+            }
+        })
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
 )
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element))
@@ -178,20 +178,20 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 /* Celebrate Button Confetti Trigger */
 const celebrateButton = document.querySelector('#celebrate')
 celebrateButton.addEventListener('click', () => {
-  const colors = ['#29483f', '#397c78', '#77a9a0', '#b99152']
-  const confetti = document.createDocumentFragment()
-  for (let index = 0; index < 42; index += 1) {
-    const piece = document.createElement('span')
-    piece.className = 'confetti'
-    piece.style.setProperty('--x', `${(Math.random() - 0.5) * 110}vw`)
-    piece.style.setProperty('--y', `${70 + Math.random() * 40}vh`)
-    piece.style.setProperty('--r', `${Math.random() * 720 - 360}deg`)
-    piece.style.setProperty('--delay', `${Math.random() * 180}ms`)
-    piece.style.backgroundColor = colors[index % colors.length]
-    confetti.append(piece)
-  }
-  document.body.append(confetti)
-  celebrateButton.classList.remove('celebrating')
-  requestAnimationFrame(() => celebrateButton.classList.add('celebrating'))
-  window.setTimeout(() => document.querySelectorAll('.confetti').forEach((piece) => piece.remove()), 2200)
+    const colors = ['#29483f', '#397c78', '#77a9a0', '#b99152']
+    const confetti = document.createDocumentFragment()
+    for (let index = 0; index < 42; index += 1) {
+        const piece = document.createElement('span')
+        piece.className = 'confetti'
+        piece.style.setProperty('--x', `${(Math.random() - 0.5) * 110}vw`)
+        piece.style.setProperty('--y', `${70 + Math.random() * 40}vh`)
+        piece.style.setProperty('--r', `${Math.random() * 720 - 360}deg`)
+        piece.style.setProperty('--delay', `${Math.random() * 180}ms`)
+        piece.style.backgroundColor = colors[index % colors.length]
+        confetti.append(piece)
+    }
+    document.body.append(confetti)
+    celebrateButton.classList.remove('celebrating')
+    requestAnimationFrame(() => celebrateButton.classList.add('celebrating'))
+    window.setTimeout(() => document.querySelectorAll('.confetti').forEach((piece) => piece.remove()), 2200)
 })
