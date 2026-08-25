@@ -1695,3 +1695,42 @@ footer p {
     filter: brightness(1.15) contrast(1.1) saturate(1.25);
     transition: filter 0.3s ease;
 }
+/* Java Icon Box */
+.engineer-item .java-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f97316; /* Java Orange Accent */
+  filter: drop-shadow(0 0 5px rgba(249, 115, 22, 0.4));
+}
+
+/* Subtle Animated Steam Effect */
+.steam-1 {
+  animation: steamRise 2s infinite ease-in-out;
+}
+.steam-2 {
+  animation: steamRise 2s infinite ease-in-out 0.6s;
+}
+
+@keyframes steamRise {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+}
+
+/* Option 2 Tag Style */
+.java-tag {
+  background: rgba(249, 115, 22, 0.15);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: #fb923c;
+}

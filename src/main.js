@@ -51,11 +51,20 @@ document.querySelector('#app').innerHTML = `
       <span class="fusion-spark" aria-hidden="true">⚡</span>
 
       <div class="fusion-item engineer-item">
-        <div class="git-box">
-          <span class="git-label">git</span>
-          <span class="commit-hash">#2026</span>
-        </div>
-        <span class="title">Er.</span>
+<div class="fusion-item engineer-item">
+  <div class="tech-icon-box java-box" title="Java Developer">
+    <svg class="java-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Rising Steam Lines -->
+      <path class="steam steam-1" d="M6 2s1 1 1 2.5S6 6 6 6"></path>
+      <path class="steam steam-2" d="M10 2s1 1 1 2.5S10 6 10 6"></path>
+      <!-- Coffee Cup -->
+      <path d="M18 9h1a2 2 0 0 1 0 4h-1"></path>
+      <path d="M4 9h14v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"></path>
+    </svg>
+  </div>
+</div>
+  <span class="title">Er.</span>
+</div>
       </div>
     </div>
   </div>
