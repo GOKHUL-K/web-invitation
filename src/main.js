@@ -62,7 +62,6 @@ document.querySelector('#app').innerHTML = `
       <path d="M4 9h14v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"></path>
     </svg>
   </div>
-</div>
   <span class="title">Er.</span>
 </div>
       </div>
