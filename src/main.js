@@ -29,11 +29,50 @@ document.querySelector('#app').innerHTML = `
         <div class="scroll-mark" aria-hidden="true"><span></span></div>
       </section>
       <section class="countdown-line reveal" aria-label="Countdown to the wedding"><span class="countdown-heading"><span class="eyebrow">Counting the moments</span><strong>Until forever</strong></span><span class="countdown" id="countdown"><span class="countdown-unit"><strong data-unit="days">00</strong><small>days</small></span><b>:</b><span class="countdown-unit"><strong data-unit="hours">00</strong><small>hours</small></span><b>:</b><span class="countdown-unit"><strong data-unit="minutes">00</strong><small>min</small></span><b>:</b><span class="countdown-unit"><strong data-unit="seconds">00</strong><small>sec</small></span></span></section>
-      <section class="events reveal" aria-label="Wedding events">
-        <article class="event event--haldi"><span class="event-number">01</span><span class="event-icon" aria-hidden="true">✦</span><p class="event-label">Haldi ceremony</p><h2>29.08.2026</h2><p class="event-date">Saturday</p><p class="event-time">10:00 - 11:30 AM</p></article>
-        <article class="event event--betrothal"><span class="event-number">02</span><span class="event-icon" aria-hidden="true">◇</span><p class="event-label">Betrothal</p><h2>29.08.2026</h2><p class="event-date">Saturday</p><p class="event-time">4:30 - 6:00 PM</p></article>
-        <article class="event event--reception"><span class="event-number">03</span><span class="event-icon" aria-hidden="true">◌</span><p class="event-label">Reception</p><h2>29.08.2026</h2><p class="event-date">Saturday</p><p class="event-time">6:00 PM onwards</p></article>
-        <article class="event event--wedding"><span class="event-number">04</span><span class="event-icon" aria-hidden="true">✧</span><p class="event-label">Wedding</p><h2>30.08.2026</h2><p class="event-date">Sunday</p><p class="event-time">8:00 - 9:00 AM</p></article>
+<section class="events reveal" aria-label="Wedding events">
+        <article class="event event--haldi">
+          <div class="event-content">
+            <span class="event-label">Haldi ceremony</span>
+            <h2>29.08.2026</h2>
+            <div class="event-details">
+              <span class="event-day">Saturday</span>
+              <span class="event-time">10:00 - 11:30 AM</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="event event--betrothal">
+          <div class="event-content">
+            <span class="event-label">Betrothal</span>
+            <h2>29.08.2026</h2>
+            <div class="event-details">
+              <span class="event-day">Saturday</span>
+              <span class="event-time">4:30 - 6:00 PM</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="event event--reception">
+          <div class="event-content">
+            <span class="event-label">Reception</span>
+            <h2>29.08.2026</h2>
+            <div class="event-details">
+              <span class="event-day">Saturday</span>
+              <span class="event-time">6:00 PM onwards</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="event event--wedding">
+          <div class="event-content">
+            <span class="event-label">Wedding</span>
+            <h2>30.08.2026</h2>
+            <div class="event-details">
+              <span class="event-day">Sunday</span>
+              <span class="event-time">8:00 - 9:00 AM</span>
+            </div>
+          </div>
+        </article>
       </section>
       <section class="venue reveal" aria-labelledby="venue-title">
         <p class="eyebrow">The celebration will be held at</p>
@@ -48,22 +87,22 @@ document.querySelector('#app').innerHTML = `
 
 const petals = document.querySelector('.petals')
 for (let index = 0; index < 14; index += 1) {
-  const petal = document.createElement('span')
-  petal.style.setProperty('--left', `${Math.random() * 100}%`)
-  petal.style.setProperty('--delay', `${Math.random() * 8}s`)
-  petal.style.setProperty('--duration', `${9 + Math.random() * 7}s`)
-  petals.append(petal)
+    const petal = document.createElement('span')
+    petal.style.setProperty('--left', `${Math.random() * 100}%`)
+    petal.style.setProperty('--delay', `${Math.random() * 8}s`)
+    petal.style.setProperty('--duration', `${9 + Math.random() * 7}s`)
+    petals.append(petal)
 }
 
 const weddingDate = new Date('2026-08-30T08:00:00+05:30').getTime()
 const updateCountdown = () => {
-  let remaining = Math.max(0, weddingDate - Date.now())
-  const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 }
-  Object.entries(units).forEach(([unit, duration]) => {
-    const value = Math.floor(remaining / duration)
-    document.querySelector(`[data-unit="${unit}"]`).textContent = String(value).padStart(2, '0')
-    remaining -= value * duration
-  })
+    let remaining = Math.max(0, weddingDate - Date.now())
+    const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 }
+    Object.entries(units).forEach(([unit, duration]) => {
+        const value = Math.floor(remaining / duration)
+        document.querySelector(`[data-unit="${unit}"]`).textContent = String(value).padStart(2, '0')
+        remaining -= value * duration
+    })
 }
 updateCountdown()
 window.setInterval(updateCountdown, 1000)
@@ -73,20 +112,20 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 
 const celebrateButton = document.querySelector('#celebrate')
 celebrateButton.addEventListener('click', () => {
-  const colors = ['#29483f', '#397c78', '#77a9a0', '#b99152']
-  const confetti = document.createDocumentFragment()
-  for (let index = 0; index < 42; index += 1) {
-    const piece = document.createElement('span')
-    piece.className = 'confetti'
-    piece.style.setProperty('--x', `${(Math.random() - 0.5) * 110}vw`)
-    piece.style.setProperty('--y', `${70 + Math.random() * 40}vh`)
-    piece.style.setProperty('--r', `${Math.random() * 720 - 360}deg`)
-    piece.style.setProperty('--delay', `${Math.random() * 180}ms`)
-    piece.style.backgroundColor = colors[index % colors.length]
-    confetti.append(piece)
-  }
-  document.body.append(confetti)
-  celebrateButton.classList.remove('celebrating')
-  requestAnimationFrame(() => celebrateButton.classList.add('celebrating'))
-  window.setTimeout(() => document.querySelectorAll('.confetti').forEach((piece) => piece.remove()), 2200)
+    const colors = ['#29483f', '#397c78', '#77a9a0', '#b99152']
+    const confetti = document.createDocumentFragment()
+    for (let index = 0; index < 42; index += 1) {
+        const piece = document.createElement('span')
+        piece.className = 'confetti'
+        piece.style.setProperty('--x', `${(Math.random() - 0.5) * 110}vw`)
+        piece.style.setProperty('--y', `${70 + Math.random() * 40}vh`)
+        piece.style.setProperty('--r', `${Math.random() * 720 - 360}deg`)
+        piece.style.setProperty('--delay', `${Math.random() * 180}ms`)
+        piece.style.backgroundColor = colors[index % colors.length]
+        confetti.append(piece)
+    }
+    document.body.append(confetti)
+    celebrateButton.classList.remove('celebrating')
+    requestAnimationFrame(() => celebrateButton.classList.add('celebrating'))
+    window.setTimeout(() => document.querySelectorAll('.confetti').forEach((piece) => piece.remove()), 2200)
 })

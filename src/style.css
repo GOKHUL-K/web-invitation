@@ -106,3 +106,100 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
 .event--reception { color: #714c37; border-color: rgba(148, 91, 61, .48); background: #f0dfcd; }.event--reception .event-icon { color: #b06e47; background: #f8eee2; }.event--reception .event-number, .event--reception .event-label { color: #a3613f; }.event--reception h2, .event--reception .event-date { color: #714c37; }.event--reception .event-time { color: #996b50; }
 .event--wedding { color: #f7f2e4; background: #536848; }.event--wedding .event-icon { color: #e8d7a8; background: #536848; }.event--wedding .event-number, .event--wedding .event-label { color: #d9dfc8; }.event--wedding h2 { color: #f7f2e4; }.event--wedding .event-date, .event--wedding .event-time { color: #d9dfc8; }
 .event--wedding, .event--wedding h2, .event--wedding .event-label, .event--wedding .event-date, .event--wedding .event-time, .event--wedding .event-number { color: #304b35; }.event--wedding .event-icon { color: #304b35; background: transparent; }
+/* -------------------------------------------------------------
+   PERFECT HORIZONTAL & VERTICAL CENTERING FOR INVITATION
+   ------------------------------------------------------------- */
+
+/* Outer Section Container */
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Horizontally centers cards inside the container */
+  justify-content: center; /* Vertically aligns content if height is set */
+  gap: 2.5rem;
+  padding: 4rem 1.5rem;
+  width: 100%;
+  max-width: 500px;        /* Keeps content nicely proportioned */
+  margin: 0 auto;          /* Horizontally centers the entire block on the page */
+  box-sizing: border-box;
+}
+
+/* Individual Event Card Wrapper */
+.event {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Inner Text Stack */
+.event-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Center-aligns all child elements (Label, Date, Details) */
+  text-align: center;
+  width: 100%;
+}
+
+.event-label {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.event h2 {
+  margin: 0.25rem 0 0.35rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Centered Day & Time block */
+.event-details {
+  display: flex;
+  align-items: baseline;
+  justify-content: center; /* Keeps Day and Time grouped in the horizontal center */
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.event-day {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.event-time {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap; /* Prevents time from wrapping */
+}
+
+/* -------------------------------------------------------------
+   THEMATIC COLORS
+   ------------------------------------------------------------- */
+.event--haldi .event-label, .event--haldi .event-time { color: #b45309; }
+.event--haldi h2, .event--haldi .event-day { color: #78350f; }
+
+.event--betrothal .event-label, .event--betrothal .event-time { color: #9f5360; }
+.event--betrothal h2, .event--betrothal .event-day { color: #6e3a43; }
+
+.event--reception .event-label, .event--reception .event-time { color: #a05a32; }
+.event--reception h2, .event--reception .event-day { color: #693416; }
+
+.event--wedding .event-label, .event--wedding .event-time { color: #38422d; }
+.event--wedding h2, .event--wedding .event-day { color: #22291b; }
