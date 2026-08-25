@@ -203,3 +203,184 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
 
 .event--wedding .event-label, .event--wedding .event-time { color: #38422d; }
 .event--wedding h2, .event--wedding .event-day { color: #22291b; }
+/* -------------------------------------------------------------
+   UNIQUE BUS ROUTE CARD DESIGN
+   ------------------------------------------------------------- */
+.bus-route-card {
+  position: relative;
+  margin: 2.5rem auto;
+  padding: 2.2rem 1.8rem 1.8rem;
+  width: min(100%, 480px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.65), rgba(245, 241, 231, 0.85));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(178, 155, 104, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(81, 88, 68, 0.08);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Header Elements */
+.bus-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.bus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(124, 134, 97, 0.12);
+  color: var(--deep-olive, #4f5942);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.bus-card-header h3 {
+  margin: 0;
+  color: var(--ink, #515844);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.bus-subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--soft-ink, #777a69);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Route Vertical Timeline */
+.route-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.route-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Node Markers */
+.step-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--paper, #f5f1e7);
+  border: 3px solid #b29b68;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(178, 155, 104, 0.2);
+}
+
+.step-marker.origin {
+  border-color: #7c8661;
+  background: #7c8661;
+}
+
+.step-marker.via-node {
+  border-color: #d97706;
+  background: #fef08a;
+}
+
+.step-marker.dest-node {
+  border-color: #b29b68;
+  background: #b29b68;
+  box-shadow: 0 0 0 4px rgba(178, 155, 104, 0.25);
+}
+
+/* Step Typography */
+.step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--soft-ink, #777a69);
+}
+
+.step-title {
+  color: var(--ink, #515844);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0.1rem 0;
+}
+
+.step-info small {
+  color: var(--soft-ink, #777a69);
+  font-size: 0.78rem;
+}
+
+/* Connecting Motion Lines */
+.route-line {
+  position: relative;
+  width: 2px;
+  height: 42px;
+  background: linear-gradient(180deg, #7c8661, #d97706);
+  margin-left: 6px;
+  z-index: 1;
+}
+
+.route-line.second-leg {
+  background: linear-gradient(180deg, #d97706, #b29b68);
+  height: 38px;
+}
+
+/* Animated Bus Icon along route line */
+.bus-pulse {
+  position: absolute;
+  left: -8px;
+  font-size: 0.75rem;
+  animation: moveBus 3.5s linear infinite;
+}
+
+@keyframes moveBus {
+  0% { top: 0%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 85%; opacity: 0; }
+}
+
+/* Card Footer Note */
+.bus-footer-note {
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(81, 88, 68, 0.2);
+}
+
+.bus-footer-note p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--deep-olive, #4f5942);
+  letter-spacing: 0.04em;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 480px) {
+  .bus-route-card {
+    padding: 1.8rem 1.2rem 1.4rem;
+    margin: 2rem 0.5rem;
+  }
+}
