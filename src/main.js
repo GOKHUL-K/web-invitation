@@ -80,7 +80,7 @@ document.querySelector('#app').innerHTML = `
         <p class="venue-place">Kallidaikurchi, Tirunelveli</p>
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Town+Panchayat+Marriage+Hall%2C+Kallidaikurchi%2C+Tirunelveli" target="_blank" rel="noreferrer">View location <span aria-hidden="true">↗</span></a>
       </section>
-      <footer><p>We cannot wait to celebrate with you.</p><p>With love, Vishnu &amp; Divyadharshni</p></footer>
+      <footer><p>We eagerly wait to celebrate with you.</p><p>With love, Vishnu &amp; Divyadharshni</p></footer>
     </div>
   </main>
 `
