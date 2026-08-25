@@ -237,58 +237,61 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2r
 }
 
 /* -------------------------------------------------------------
-   GOOGLE MAPS STYLE ACTION BUTTON
+   THEME-MATCHED GOOGLE MAPS BUTTON (ROUNDED SQUARE EDGES)
    ------------------------------------------------------------- */
 .venue-map-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.4rem;
+  gap: 0.6rem;
+  padding: 0.75rem 1.4rem;
   margin: 1.25rem auto 0;
   
-  /* Google Maps White Pill Style */
-  background-color: #ffffff;
-  color: #1a73e8; /* Google Link Blue */
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.8rem;
+  /* Palette match: Warm glass surface & theme text color */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 241, 231, 0.95));
+  color: #515844; /* Primary olive text color */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
   
-  /* Google-style Pill Border & Shadow */
-  border: 1px solid #dadce0;
-  border-radius: 100px;
-  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.12), 0 1px 2px rgba(60, 64, 67, 0.24);
+  /* Rounded Square Edges (12px radius) */
+  border-radius: 12px;
+  border: 1px solid rgba(178, 155, 104, 0.4); /* Theme gold border */
+  box-shadow: 0 4px 15px rgba(81, 88, 68, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   
-  /* Smooth Hover Transition */
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Smooth interaction animations */
+  transition: all 0.25s ease;
   box-sizing: border-box;
 }
 
-/* Red Google Maps Pin */
+/* Red Google Pin Icon */
 .venue-map-btn .gmap-icon {
   display: flex;
   align-items: center;
-  color: #ea4335; /* Authentic Google Maps Pin Red */
-  transition: transform 0.2s ease;
+  color: #ea4335; /* Classic Google Pin Red */
+  transition: transform 0.25s ease;
 }
 
-/* Hover & Focus Effects */
+/* Hover & Active States */
 .venue-map-btn:hover {
-  background-color: #f8f9fa;
-  color: #174ea6; /* Darker Blue */
-  border-color: #d2e3fc;
-  box-shadow: 0 3px 8px rgba(60, 64, 67, 0.2);
-  transform: translateY(-1px);
+  background: #515844; /* Darkens to primary olive accent */
+  color: #f5f1e7; /* Cream text */
+  border-color: #515844;
+  box-shadow: 0 8px 20px rgba(81, 88, 68, 0.22);
+  transform: translateY(-2px);
 }
 
 .venue-map-btn:hover .gmap-icon {
-  transform: scale(1.1);
+  color: #fef08a; /* Soft warm yellow glow on hover */
+  transform: scale(1.12);
 }
 
 .venue-map-btn:active {
-  background-color: #f1f3f4;
-  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.15);
   transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(81, 88, 68, 0.15);
 }
