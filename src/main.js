@@ -22,50 +22,20 @@ document.querySelector('#app').innerHTML = `
         <div class="photo-stage">
           <img src="${couplePhotoUrl}" alt="Vishnu and Divyadharshni walking together on a beach" />
           <div class="photo-wash" aria-hidden="true"></div>
-          <button class="name-seal" id="celebrate" type="button" aria-label="Celebrate Vishnu and Divyadharshni">
-            <span id="invitation-title" class="name-line">Vishnu</span><i>&amp;</i><span class="name-line">Divyadharshni</span>
+          <button class="name-seal" id="celebrate" type="button" aria-label="Celebrate Divyadharshni and Vishnu">
+            <span id="invitation-title" class="name-line">Divyadharshni</span><i>&amp;</i><span class="name-line">Vishnu</span>
           </button>
         </div>
-        <p class="hero-copy">As we begin our happily ever after, your presence and blessings would mean the world to us.</p>
         <p class="tamil-line">அவளும் நானும்</p>
         <div class="scroll-mark" aria-hidden="true"><span></span></div>
       </section>
 <section class="countdown-line reveal reveal--up" aria-label="Countdown to the wedding">
-  <!-- Top Row: Compact Heading & Dr./Er. Badge -->
   <div class="countdown-header-row">
     <div class="countdown-heading">
       <span class="eyebrow">Counting the moments</span>
       <strong>Until forever</strong>
     </div>
 
-    <!-- Profession Fusion Badge -->
-    <div class="fusion-badge-line" aria-label="Doctor and Engineer partnership">
-      <div class="fusion-item doctor-item">
-        <span class="rx-symbol">R<sub>x</sub></span>
-        <svg class="mini-ecg" viewBox="0 0 40 20" width="22" height="11" aria-hidden="true">
-          <path d="M0,10 L8,10 L11,2 L15,18 L19,5 L22,14 L25,10 L40,10" fill="none" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <span class="title">Dr.</span>
-      </div>
-
-      <span class="fusion-spark" aria-hidden="true">⚡</span>
-
-      <div class="fusion-item engineer-item">
-<div class="fusion-item engineer-item">
-  <div class="tech-icon-box java-box" title="Java Developer">
-    <svg class="java-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Rising Steam Lines -->
-      <path class="steam steam-1" d="M6 2s1 1 1 2.5S6 6 6 6"></path>
-      <path class="steam steam-2" d="M10 2s1 1 1 2.5S10 6 10 6"></path>
-      <!-- Coffee Cup -->
-      <path d="M18 9h1a2 2 0 0 1 0 4h-1"></path>
-      <path d="M4 9h14v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"></path>
-    </svg>
-  </div>
-  <span class="title">Er.</span>
-</div>
-      </div>
-    </div>
   </div>
 
   <!-- Bottom Row: Compact Horizontal Timer -->
@@ -80,7 +50,10 @@ document.querySelector('#app').innerHTML = `
       <section class="events" aria-label="Wedding events">
         <article class="event event--haldi reveal reveal--up">
           <div class="event-content">
-            <span class="event-label">Haldi ceremony</span>
+            <div class="event-label-line">
+              <span class="event-emblem event-emblem--haldi" aria-hidden="true"><img src="${import.meta.env.BASE_URL}event-images/haldi.jpeg" alt="" /></span>
+              <span class="event-label">Haldi ceremony</span>
+            </div>
             <h2>29.08.2026</h2>
             <div class="event-details">
               <span class="event-day">Saturday</span>
@@ -91,7 +64,10 @@ document.querySelector('#app').innerHTML = `
 
         <article class="event event--betrothal reveal reveal--up">
           <div class="event-content">
-            <span class="event-label">Betrothal</span>
+            <div class="event-label-line">
+              <span class="event-emblem event-emblem--betrothal" aria-hidden="true"><img src="${import.meta.env.BASE_URL}event-images/betrothal.jpeg" alt="" /></span>
+              <span class="event-label">Betrothal</span>
+            </div>
             <h2>29.08.2026</h2>
             <div class="event-details">
               <span class="event-day">Saturday</span>
@@ -102,7 +78,10 @@ document.querySelector('#app').innerHTML = `
 
         <article class="event event--reception reveal reveal--up">
           <div class="event-content">
-            <span class="event-label">Reception</span>
+            <div class="event-label-line">
+              <span class="event-emblem event-emblem--reception" aria-hidden="true"><img src="${import.meta.env.BASE_URL}event-images/reception.jpg" alt="" /></span>
+              <span class="event-label">Reception</span>
+            </div>
             <h2>29.08.2026</h2>
             <div class="event-details">
               <span class="event-day">Saturday</span>
@@ -113,7 +92,10 @@ document.querySelector('#app').innerHTML = `
 
         <article class="event event--wedding reveal reveal--up">
           <div class="event-content">
-            <span class="event-label">Wedding</span>
+            <div class="event-label-line">
+              <span class="event-emblem event-emblem--wedding" aria-hidden="true"><img src="${import.meta.env.BASE_URL}event-images/wedding.png" alt="" /></span>
+              <span class="event-label">Wedding</span>
+            </div>
             <h2>30.08.2026</h2>
             <div class="event-details">
               <span class="event-day">Sunday</span>
@@ -129,8 +111,11 @@ document.querySelector('#app').innerHTML = `
         <p class="venue-place">Kallidaikurchi, Tirunelveli</p>
         <a class="venue-map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Town+Panchayat+Marriage+Hall%2C+Kallidaikurchi%2C+Tirunelveli" target="_blank" rel="noreferrer">
           <span class="gmap-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5-1.12 2.5-2.5 2.5z"/>
+            <svg width="18" height="18" viewBox="0 0 24 24">
+              <path fill="#ea4335" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
+              <path fill="#fbbc04" d="M5.7 13.2C7.4 17 12 22 12 22s1.6-1.8 3.2-4.1l-2.1-4.7z"/>
+              <path fill="#34a853" d="M15.1 17.9C16.9 15.2 19 11.1 19 9a7 7 0 0 0-.3-2L12 12.7z"/>
+              <circle cx="12" cy="9" r="2.5" fill="#1a73e8"/>
             </svg>
           </span>
           <span class="btn-text">Open in Google Maps</span>
@@ -138,8 +123,11 @@ document.querySelector('#app').innerHTML = `
       </section>
 
       <footer class="reveal reveal--fade">
-        <p>We eagerly wait to celebrate with you.</p>
-        <p>With love, Vishnu &amp; Divyadharshni</p>
+        <div class="footer-message">
+          <p>We eagerly wait to celebrate with you.</p>
+          <p>With love, family, relatives &amp; friends</p>
+        </div>
+        <p class="footer-contact">Gokhul K: 9344006224</p>
       </footer>
     </div>
   </main>
