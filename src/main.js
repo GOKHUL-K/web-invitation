@@ -127,7 +127,7 @@ document.querySelector('#app').innerHTML = `
           <p>We eagerly wait to celebrate with you.</p>
           <p>With love, family, relatives &amp; friends</p>
         </div>
-        <p class="footer-contact">Gokhul K: 9344006224</p>
+        <p class="footer-contact">For any queries, please contact Gokhul K: 9344006224</p>
       </footer>
     </div>
   </main>

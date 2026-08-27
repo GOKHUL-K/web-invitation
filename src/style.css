@@ -1657,7 +1657,7 @@ footer p {
 .countdown-header-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 540px;
     gap: 0.8rem;
@@ -1666,7 +1666,8 @@ footer p {
 .countdown-heading {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
+    text-align: center;
 }
 
 .countdown-heading .eyebrow {
